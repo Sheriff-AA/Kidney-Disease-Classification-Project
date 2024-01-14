@@ -77,8 +77,7 @@ export MLFLOW_TRACKING_URI=https://dagshub.com/sherifatitebi/Kidney-Disease-Clas
 
 export MLFLOW_TRACKING_USERNAME=sherifatitebi
 
-export MLFLOW_TRACKING_PASSWORD=********************************
-
+export MLFLOW_TRACKING_PASSWORD=***********************
 ```
 
 ### DVC cmd

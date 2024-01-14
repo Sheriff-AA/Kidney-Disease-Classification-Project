@@ -1,0 +1,113 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/kidneyDiseaseClassifier/pipeline/stage_01_data_ingestion.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 696c441ea359cffec59659fdb3e7848d
+      size: 669
+    - path: src/kidneyDiseaseClassifier/pipeline/stage_01_data_ingestion.py
+      hash: md5
+      md5: 6d92fb24883f7ad5269a7a7518d40cf4
+      size: 936
+    outs:
+    - path: artifacts/data_ingestion/Kidney-Tumor-Normal Classification Images
+      hash: md5
+      md5: bb5267cf7e621f2b5aa297967468a4e4.dir
+      size: 249200007
+      nfiles: 1956
+  prepare_base_model:
+    cmd: python src/kidneyDiseaseClassifier/pipeline/stage_02_prepare_base_model.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 696c441ea359cffec59659fdb3e7848d
+      size: 669
+    - path: src/kidneyDiseaseClassifier/pipeline/stage_02_prepare_base_model.py
+      hash: md5
+      md5: 3483f21589b350c3290001d3f888cb64
+      size: 976
+    params:
+      params.yaml:
+        CLASSES: 2
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+        INCLUDE_TOP: false
+        LEARNING_RATE: 0.01
+        WEIGHTS: imagenet
+    outs:
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 11298d00bc13b0396105232eca7bf024.dir
+      size: 118054560
+      nfiles: 2
+  training:
+    cmd: python src/kidneyDiseaseClassifier/pipeline/stage_03_model_training.py
+    deps:
+    - path: artifacts/data_ingestion/Kidney-Tumor-Normal Classification Images
+      hash: md5
+      md5: bb5267cf7e621f2b5aa297967468a4e4.dir
+      size: 249200007
+      nfiles: 1956
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 11298d00bc13b0396105232eca7bf024.dir
+      size: 118054560
+      nfiles: 2
+    - path: config/config.yaml
+      hash: md5
+      md5: 696c441ea359cffec59659fdb3e7848d
+      size: 669
+    - path: src/kidneyDiseaseClassifier/pipeline/stage_03_model_training.py
+      hash: md5
+      md5: 8e29ff6a026cb7525908dfedb4b966f1
+      size: 939
+    params:
+      params.yaml:
+        AUGMENTATION: true
+        BATCH_SIZE: 16
+        EPOCHS: 8
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+    outs:
+    - path: artifacts/training/model.h5
+      hash: md5
+      md5: 4a0fbfe5474cc74dde0c76f899f8c3af
+      size: 59337520
+  evaluation:
+    cmd: python src/kidneyDiseaseClassifier/pipeline/stage_04_model_evaluation.py
+    deps:
+    - path: artifacts/data_ingestion/Kidney-Tumor-Normal Classification Images
+      hash: md5
+      md5: bb5267cf7e621f2b5aa297967468a4e4.dir
+      size: 249200007
+      nfiles: 1956
+    - path: artifacts/training/model.h5
+      hash: md5
+      md5: 4a0fbfe5474cc74dde0c76f899f8c3af
+      size: 59337520
+    - path: config/config.yaml
+      hash: md5
+      md5: 696c441ea359cffec59659fdb3e7848d
+      size: 669
+    - path: src/kidneyDiseaseClassifier/pipeline/stage_04_model_evaluation.py
+      hash: md5
+      md5: 1e93d06c1c84e2f4a70d6d43d5ecce2e
+      size: 988
+    params:
+      params.yaml:
+        BATCH_SIZE: 16
+        IMAGE_SIZE:
+        - 224
+        - 224
+        - 3
+    outs:
+    - path: scores.json
+      hash: md5
+      md5: 86e2b9ae1c196928355982541ce533cf
+      size: 72

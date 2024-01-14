@@ -378,3 +378,187 @@ x==========x]
 [2024-01-12 23:05:35,933: INFO: main: >>>>>> stage Evaluation Stage completed <<<<<<
 
 x==========x]
+[2024-01-13 22:42:37,041: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-01-13 22:42:37,054: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-13 22:42:37,075: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-13 22:42:37,076: INFO: common: created directory at: artifacts]
+[2024-01-13 22:42:37,079: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-01-13 22:42:37,080: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-13 22:42:38,208: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-13 22:42:38,212: ERROR: stage_01_data_ingestion: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip']
+Traceback (most recent call last):
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 24, in <module>
+    obj.main()
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\sherif atitebi o\documents\kidney-disease-classification-project\src\kidneyDiseaseClassifier\components\data_ingestion.py", line 44, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\SHERIF ATITEBI O\AppData\Local\Programs\Python\Python39\lib\zipfile.py", line 1239, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip'
+[2024-01-13 22:47:57,560: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-01-13 22:47:57,563: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-13 22:47:57,565: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-13 22:47:57,566: INFO: common: created directory at: artifacts]
+[2024-01-13 22:47:57,567: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-01-13 22:47:57,568: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-13 22:47:58,103: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-13 22:47:58,105: ERROR: stage_01_data_ingestion: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip']
+Traceback (most recent call last):
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 24, in <module>
+    obj.main()
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\sherif atitebi o\documents\kidney-disease-classification-project\src\kidneyDiseaseClassifier\components\data_ingestion.py", line 44, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\SHERIF ATITEBI O\AppData\Local\Programs\Python\Python39\lib\zipfile.py", line 1239, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip'
+[2024-01-13 22:53:39,598: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-01-13 22:53:39,601: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-13 22:53:39,603: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-13 22:53:39,604: INFO: common: created directory at: artifacts]
+[2024-01-13 22:53:39,605: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-01-13 22:53:39,605: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-13 22:53:40,668: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-13 22:53:40,669: ERROR: stage_01_data_ingestion: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip']
+Traceback (most recent call last):
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 24, in <module>
+    obj.main()
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\sherif atitebi o\documents\kidney-disease-classification-project\src\kidneyDiseaseClassifier\components\data_ingestion.py", line 44, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\SHERIF ATITEBI O\AppData\Local\Programs\Python\Python39\lib\zipfile.py", line 1239, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip'
+[2024-01-14 00:06:42,651: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-01-14 00:06:42,665: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-14 00:06:42,715: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-14 00:06:42,716: INFO: common: created directory at: artifacts]
+[2024-01-14 00:06:42,717: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-01-14 00:06:42,719: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1MHgBD8HzN9Tez_XKZXd78ib1TAukWagy/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-14 00:06:44,412: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1MHgBD8HzN9Tez_XKZXd78ib1TAukWagy/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-14 00:06:44,413: ERROR: stage_01_data_ingestion: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip']
+Traceback (most recent call last):
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 24, in <module>
+    obj.main()
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\sherif atitebi o\documents\kidney-disease-classification-project\src\kidneyDiseaseClassifier\components\data_ingestion.py", line 44, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\SHERIF ATITEBI O\AppData\Local\Programs\Python\Python39\lib\zipfile.py", line 1239, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip'
+[2024-01-14 00:12:30,727: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-01-14 00:12:30,749: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-14 00:12:30,751: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-14 00:12:30,752: INFO: common: created directory at: artifacts]
+[2024-01-14 00:12:30,753: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-01-14 00:12:30,754: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1MHgBD8HzN9Tez_XKZXd78ib1TAukWagy/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-14 00:12:31,934: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1MHgBD8HzN9Tez_XKZXd78ib1TAukWagy/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-14 00:12:33,045: ERROR: stage_01_data_ingestion: File is not a zip file]
+Traceback (most recent call last):
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 24, in <module>
+    obj.main()
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\sherif atitebi o\documents\kidney-disease-classification-project\src\kidneyDiseaseClassifier\components\data_ingestion.py", line 45, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\SHERIF ATITEBI O\AppData\Local\Programs\Python\Python39\lib\zipfile.py", line 1257, in __init__
+    self._RealGetContents()
+  File "C:\Users\SHERIF ATITEBI O\AppData\Local\Programs\Python\Python39\lib\zipfile.py", line 1324, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2024-01-14 00:16:36,690: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-01-14 00:16:36,692: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-14 00:16:36,695: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-14 00:16:36,697: INFO: common: created directory at: artifacts]
+[2024-01-14 00:16:36,698: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-01-14 00:16:36,699: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1MHgBD8HzN9Tez_XKZXd78ib1TAukWagy/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-14 00:16:37,838: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1MHgBD8HzN9Tez_XKZXd78ib1TAukWagy/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-14 00:16:37,840: ERROR: stage_01_data_ingestion: File is not a zip file]
+Traceback (most recent call last):
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 24, in <module>
+    obj.main()
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\sherif atitebi o\documents\kidney-disease-classification-project\src\kidneyDiseaseClassifier\components\data_ingestion.py", line 44, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\SHERIF ATITEBI O\AppData\Local\Programs\Python\Python39\lib\zipfile.py", line 1257, in __init__
+    self._RealGetContents()
+  File "C:\Users\SHERIF ATITEBI O\AppData\Local\Programs\Python\Python39\lib\zipfile.py", line 1324, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2024-01-14 00:29:02,133: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-01-14 00:29:02,158: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-14 00:29:02,183: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-14 00:29:02,185: INFO: common: created directory at: artifacts]
+[2024-01-14 00:29:02,188: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-01-14 00:29:02,190: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1MHgBD8HzN9Tez_XKZXd78ib1TAukWagy/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-14 00:29:03,419: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1MHgBD8HzN9Tez_XKZXd78ib1TAukWagy/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-14 00:29:03,432: ERROR: stage_01_data_ingestion: File is not a zip file]
+Traceback (most recent call last):
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 24, in <module>
+    obj.main()
+  File "C:\Users\SHERIF ATITEBI O\Documents\Kidney-Disease-Classification-Project\src\kidneyDiseaseClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\sherif atitebi o\documents\kidney-disease-classification-project\src\kidneyDiseaseClassifier\components\data_ingestion.py", line 44, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "C:\Users\SHERIF ATITEBI O\AppData\Local\Programs\Python\Python39\lib\zipfile.py", line 1257, in __init__
+    self._RealGetContents()
+  File "C:\Users\SHERIF ATITEBI O\AppData\Local\Programs\Python\Python39\lib\zipfile.py", line 1324, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2024-01-14 00:43:59,765: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2024-01-14 00:43:59,781: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-14 00:43:59,802: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-14 00:43:59,803: INFO: common: created directory at: artifacts]
+[2024-01-14 00:43:59,804: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-01-14 00:43:59,806: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1UobrnxGapkb2PYzsfuM75VkYVf-fRaqG/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-14 00:45:36,205: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1UobrnxGapkb2PYzsfuM75VkYVf-fRaqG/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-14 00:45:59,180: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2024-01-14 00:48:43,007: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare Base Model started <<<<<<]
+[2024-01-14 00:48:43,024: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-14 00:48:43,025: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-14 00:48:43,026: INFO: common: created directory at: artifacts]
+[2024-01-14 00:48:43,027: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-01-14 00:48:46,773: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-01-14 00:48:47,196: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare Base Model completed <<<<<<
+
+x==========x]
+[2024-01-14 00:49:08,089: INFO: stage_03_model_training: *******************]
+[2024-01-14 00:49:08,090: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2024-01-14 00:49:08,094: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-14 00:49:08,096: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-14 00:49:08,097: INFO: common: created directory at: artifacts]
+[2024-01-14 00:49:08,098: INFO: common: created directory at: artifacts\training]
+[2024-01-14 01:27:08,362: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-01-14 01:28:10,842: INFO: stage_04_model_evaluation: *******************]
+[2024-01-14 01:28:10,842: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation Stage started <<<<<<]
+[2024-01-14 01:28:10,846: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-14 01:28:10,849: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-14 01:28:10,850: INFO: common: created directory at: artifacts]
+[2024-01-14 01:29:18,241: INFO: common: json file saved at: scores.json]
+[2024-01-14 01:29:18,243: INFO: common: json file saved at: scores.json]
+[2024-01-14 01:29:21,429: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-01-14 01:29:23,069: INFO: builder_impl: Assets written to: C:\Users\SHERIF~1\AppData\Local\Temp\tmpei4c_xs6\model\data\model\assets]
+[2024-01-14 01:29:56,229: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation Stage completed <<<<<<
+
+x==========x]
+[2024-01-14 01:34:55,101: INFO: stage_04_model_evaluation: ******************]
+[2024-01-14 01:34:55,102: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation Stage started <<<<<<]
+[2024-01-14 01:34:55,106: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-14 01:34:55,108: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-14 01:34:55,109: INFO: common: created directory at: artifacts]
+[2024-01-14 01:36:03,533: INFO: common: json file saved at: scores.json]
+[2024-01-14 01:36:03,534: INFO: common: json file saved at: scores.json]
+[2024-01-14 01:36:07,274: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-01-14 01:36:08,870: INFO: builder_impl: Assets written to: C:\Users\SHERIF~1\AppData\Local\Temp\tmp1m_p75l0\model\data\model\assets]
+[2024-01-14 01:37:20,010: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation Stage completed <<<<<<
+
+x==========x]

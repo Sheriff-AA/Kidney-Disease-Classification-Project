@@ -172,3 +172,7 @@ mlruns.db
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# .dvc.conf.lock
+# /dvc.lock
+# /.dvc

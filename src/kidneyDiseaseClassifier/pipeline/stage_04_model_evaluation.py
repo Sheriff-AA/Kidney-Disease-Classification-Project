@@ -18,12 +18,15 @@ class EvaluationPipeline:
         evaluation.save_score()
         evaluation.log_into_mlflow()
 
+    def random(self):
+        pass
+
 
 
 
 if __name__ == '__main__':
     try:
-        logger.info(f"*******************")
+        logger.info(f"******************")
         logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
         obj = EvaluationPipeline()
         obj.main()
